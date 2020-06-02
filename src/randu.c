@@ -16,7 +16,6 @@ long m = pow(2,31);
 void randu_init(double seed) {
 
 	randu_value = seed;
-	printf("%d\n", randu_value );
 }
 
 //get next randu number
