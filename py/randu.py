@@ -16,4 +16,15 @@ plt.yticks(fontname='Ubuntu Mono', fontsize=12)
 x, y, z = np.loadtxt(".dat/randu.csv", delimiter='\t', unpack=True) # load data from file
 
 ax.plot(x,y,z,'.')
+ax.view_init(45,-45) # set initial view
+plt.draw()
+plt.pause(2) # wait 2 secs, then start rotating
+
+for angle in range(45, 110): # rotate the view
+    ax.view_init(angle,-45)
+    plt.draw()
+    plt.pause(.01)
+
+plt.pause(2)
+ax.view_init(45,-45) # set initial view
 plt.show()
